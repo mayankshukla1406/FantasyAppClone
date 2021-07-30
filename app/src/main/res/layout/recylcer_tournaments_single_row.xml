@@ -1,0 +1,99 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="140dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#ffffff"
+    android:layout_margin="6dp"
+    app:cardCornerRadius="4dp">
+    <LinearLayout
+        android:id="@+id/Content"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="@drawable/customizelist"
+        android:orientation="horizontal"
+        android:weightSum="6">
+
+        <!--The weight sum property is used to divide the layout into
+        different parts and then giving each layout a particular weight
+        gives it that amount of space on the screen-->
+
+
+        <!--Since each parent layout will have a specific weight, we need
+        not give any width to those layout-->
+
+        <ImageView
+            android:id="@+id/imgTournament"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_weight="2"
+            android:padding="20dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher"
+            android:contentDescription="@string/tournamentimage" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4">
+
+            <TextView
+                android:id="@+id/txtTournamentName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/name_of_the_tournament"
+                android:textColor="@color/mycolor2"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/txtTournamentTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:layout_below="@+id/txtTournamentAmount"
+                android:textColor="@color/mycolor2"
+                android:text="@string/time"
+                android:layout_marginStart="150dp"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/txtTournamentAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/customizerupee"
+                android:text="@string/rs_40"
+                android:drawableLeft="@drawable/ic_rupee"
+                android:textColor="@color/mycolor6"
+                android:textSize="14sp"
+                android:layout_marginTop="22dp"
+                android:layout_marginStart="140dp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/txttournamentPrizePool"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtTournamentName"
+                android:text="2000"
+                android:padding="7dp"
+                android:textSize="14sp"
+                android:textColor="@color/mycolor2"
+                android:textStyle="bold"
+                android:drawableLeft="@drawable/ic_rupee"
+                />
+            <TextView
+                android:id="@+id/txtdescription"
+                android:layout_width="160dp"
+                android:textSize="12sp"
+                android:layout_height="wrap_content"
+                android:hint="Map of Game"
+                android:layout_below="@id/txttournamentPrizePool"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtdescription"
+                />
+
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

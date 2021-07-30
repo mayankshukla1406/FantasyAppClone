@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mycolor13"
+    tools:context=".Activity.DescriptionActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark" />
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swiperefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginBottom="50dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+    <LinearLayout
+        android:id="@+id/Content"
+        android:background="@drawable/customizelist"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:weightSum="6">
+
+        <!--The weight sum property is used to divide the layout into
+        different parts and then giving each layout a particular weight
+        gives it that amount of space on the screen-->
+
+
+        <!--Since each parent layout will have a specific weight, we need
+        not give any width to those layout-->
+
+        <ImageView
+            android:id="@+id/imgTournament"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_weight="2"
+            android:padding="28dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_launcher"
+            android:contentDescription="@string/tournamentimage" />
+
+        <RelativeLayout
+            android:layout_width="40dp"
+            android:layout_height="130dp"
+            android:layout_weight="4"
+            >
+            <TextView
+                android:id="@+id/txtTournamentName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:text="@string/name_of_the_tournament"
+                android:textColor="@color/mycolor2"
+                android:textStyle="bold"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/txtTournamentTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtTournamentName"
+                android:padding="5dp"
+                android:textColor="@color/mycolor2"
+                android:text="@string/time"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/txtTournamentDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtTournamentName"
+                android:padding="5dp"
+                android:layout_marginStart="130dp"
+                android:textColor="@color/mycolor2"
+                android:text="@string/time"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/txtTournamentType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtTournamentTime"
+                android:padding="6dp"
+                android:layout_marginStart="80dp"
+                android:textColor="@color/mycolor2"
+                android:text="@string/type"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/txtTournamentMap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtTournamentTime"
+                android:padding="6dp"
+                android:layout_marginStart="160dp"
+                android:textColor="@color/mycolor2"
+                android:text="@string/map"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/txtTournamentAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtTournamentTime"
+                android:padding="6dp"
+                android:text="@string/rs_40"
+                android:drawableLeft="@drawable/ic_rupee"
+                android:textColor="@color/mycolor4"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/txttusers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="6dp"
+                android:textSize="18sp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/mycolor2"
+                android:layout_marginStart="200dp"
+                android:text="/100"
+                />
+            <TextView
+                android:id="@+id/txttuserscount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="6dp"
+                android:textSize="18sp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/mycolor2"
+                android:layout_marginStart="170dp"
+                android:text="0"
+                />
+        </RelativeLayout>
+        </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/content2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/Content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/customizelist"
+        >
+        <EditText
+        android:id="@+id/etpubgID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:padding="9dp"
+        android:hint="@string/pubgid"
+        android:textColor="@color/mycolor2"
+        android:textColorHint="@color/mycolor2"
+        android:textStyle="bold"
+        android:textSize="17sp"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/customizeidandusername"
+        android:layout_marginEnd="30dp"
+            android:autofillHints="" />
+        <TextView
+            android:id="@+id/txtpubgID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:padding="9dp"
+            android:textColorHint="@color/mycolor2"
+            android:textStyle="bold"
+            android:visibility="gone"
+            android:textSize="17sp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/customizeidandusername"
+            android:layout_marginEnd="30dp"
+            />
+        <Button
+            android:id="@+id/btchangeusername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/change"
+            android:textSize="18sp"
+            android:textColor="@color/mycolor6"
+            android:textStyle="bold"
+            android:layout_below="@+id/txtpubgID"
+            android:padding="8dp"
+            android:visibility="gone"
+            android:background="@drawable/customizebutton"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="150dp"
+            />
+        <Button
+            android:id="@+id/btdoneusername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/OK"
+            android:textSize="18sp"
+            android:textColor="@color/mycolor6"
+            android:layout_below="@id/etpubgID"
+            android:textStyle="bold"
+            android:padding="8dp"
+            android:visibility="gone"
+            android:background="@drawable/customizebutton"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="150dp"
+            />
+        <TextView
+            android:id="@+id/txtroomid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:padding="10dp"
+            android:textIsSelectable="true"
+            android:hint="@string/room_id"
+            android:textStyle="bold"
+            android:textColor="@color/mycolor2"
+            android:textSize="18sp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/customizeroomidandpassword"
+            />
+        <TextView
+            android:id="@+id/txtroompassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtroomid"
+            android:padding="10dp"
+            android:hint="@string/room_password"
+            android:textColor="@color/mycolor2"
+            android:textSize="18sp"
+            android:textIsSelectable="true"
+            android:textStyle="bold"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/customizeroomidandpassword"
+            android:layout_marginTop="10dp"
+            />
+        <TextView
+            android:id="@+id/txtAboutTournament"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/txtroompassword"
+            android:padding="6dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/mycolor2"
+            android:text="@string/tournament_details"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtTournamentDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtAboutTournament"
+            android:layout_margin="10dp"
+            android:padding="6dp"
+            android:textColor="@color/mycolor2"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+            <Button
+                android:id="@+id/btsubscribeyoutube"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/content2"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/mycolor6"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="@string/subscribe_our_youtube_channel"
+                android:background="@drawable/youtube"
+                android:layout_centerInParent="true"
+                android:padding="10dp"
+                android:layout_marginEnd="90dp"
+                />
+            <Button
+                android:id="@+id/btfollowInstagram"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btsubscribeyoutube"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/mycolor6"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_centerInParent="true"
+                android:text="@string/follow_us_on_instagram"
+                android:background="@drawable/instagram"
+                android:layout_marginStart="15dp"
+                android:padding="10dp"
+                android:layout_marginEnd="90dp"
+                />
+            <Button
+                android:id="@+id/btlikefacebook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btfollowInstagram"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/mycolor6"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_centerInParent="true"
+                android:text="@string/like_our_facebook_page"
+                android:background="@drawable/facebook"
+                android:layout_marginStart="15dp"
+                android:padding="10dp"
+                android:layout_marginEnd="90dp"
+                />
+        </RelativeLayout>
+
+</ScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <Button
+        android:id="@+id/btnJoinNow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text = "@string/join_now"
+        android:visibility="gone"
+        android:textColor="@color/mycolor6"
+        android:textSize="25sp"
+        android:background ="@drawable/customizebutton"
+        android:textStyle="bold" />
+    <Button
+        android:id="@+id/btnJoined"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text = "@string/Joined"
+        android:visibility="gone"
+        android:textColor="@color/mycolor4"
+        android:textSize="25sp"
+        android:background ="@drawable/joinedcustomize"
+        android:textStyle="bold" />
+    <Button
+        android:id="@+id/btnnotavailable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text = "Not Available To Join "
+        android:visibility="gone"
+        android:textColor="@color/mycolor6"
+        android:textSize="25sp"
+        android:background ="@drawable/customizebutton"
+        android:textStyle="bold" />
+<RelativeLayout
+android:id="@+id/progressLayout"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:visibility="gone"
+android:background="#ffffff">
+
+<ProgressBar
+    android:id="@+id/progressBar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerInParent="true" />
+
+</RelativeLayout>
+
+
+</RelativeLayout>

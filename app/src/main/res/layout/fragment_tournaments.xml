@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="50dp"
+    android:background="#483d8b"
+    tools:context=".Fragment.Tournaments">
+    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/imgback1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back4"
+        android:contentDescription="@string/background" />
+
+    <TextView
+        android:id="@+id/txtDash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imgback1"
+        android:layout_margin="10dp"
+        android:textColor="@color/mycolor6"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:text="@string/select_a_tournament"
+         />
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swiperefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtDash"
+        >
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerTournaments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below ="@+id/txtDash"
+        android:padding="10dp"
+        />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <RelativeLayout
+        android:id="@+id/progressLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below ="@+id/txtDash"
+        android:background="#fff">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+</RelativeLayout>

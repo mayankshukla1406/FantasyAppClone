@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "92072127263",
+    "firebase_url": "https://my-application-7c466.firebaseio.com",
+    "project_id": "my-application-7c466",
+    "storage_bucket": "my-application-7c466.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:92072127263:android:00bad35aeaec364d6c1e2a",
+        "android_client_info": {
+          "package_name": "com.mayank.myapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "92072127263-iel17um6e44p08m9d2tarnr0rn4k0pgi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCOq0lgHMnjxAAaiQ-O3kGBdkklWkhKew0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "92072127263-iel17um6e44p08m9d2tarnr0rn4k0pgi.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
